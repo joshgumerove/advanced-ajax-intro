@@ -12,7 +12,12 @@ textButton.addEventListener("click", () => {
   xhr.onload = () => {
     if (xhr.status == 200) {
       let data = xhr.responseText;
-      textCard.innerHTML = data;
+      showTextData(data);
     }
+  };
+
+  let showTextData = (data) => {
+    let messageTemplate = `<p>${data}</p>`;
+    textCard.innerHTML = messageTemplate;
   };
 });
