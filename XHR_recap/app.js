@@ -21,3 +21,27 @@ textButton.addEventListener("click", () => {
     textCard.innerHTML = messageTemplate;
   };
 });
+
+// JSON DATA
+let JSONButton = document.getElementById("json");
+let JSONCard = document.getElementById("JSONCard");
+
+JSONButton.addEventListener("click", () => {
+  let xhr = new XMLHttpRequest();
+  let method = "GET";
+  let url = "../data/data.json";
+
+  xhr.open(method, url);
+  xhr.onload = () => {
+    if (xhr.status === 200) {
+      let dataObject = JSON.parse(xhr.responseText);
+      showJSONData(dataObject);
+    }
+  };
+
+  let showJSONData = (data) => {
+    let messageTemplate = `<p>${data.book} ${data.verse}</p>`;
+    JSONCard.innerHTML = messageTemplate;
+  };
+  xhr.send();
+});
