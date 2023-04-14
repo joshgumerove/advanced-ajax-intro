@@ -45,3 +45,28 @@ JSONButton.addEventListener("click", () => {
   };
   xhr.send();
 });
+
+let apiButton = document.getElementById("api");
+let apiCard = document.getElementById("ApiCard");
+
+apiButton.addEventListener("click", () => {
+  let xhr = new XMLHttpRequest();
+  let method = "GET";
+  let url = "https://bible-api.com/john 3:16";
+
+  xhr.open(method, url);
+
+  xhr.onload = () => {
+    if (xhr.status === 200) {
+      let apiData = JSON.parse(xhr.responseText);
+      showApi(apiData);
+    }
+  };
+
+  let showApi = (data) => {
+    let messageTemplate = `<p>${data.reference} ${data.text}</p>`;
+    apiCard.innerHTML = messageTemplate;
+  };
+
+  xhr.send();
+});
