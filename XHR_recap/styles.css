@@ -1,0 +1,51 @@
+nav {
+  background-color: #333;
+  color: rgb(233, 233, 233);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 3em;
+  padding-left: 1em;
+}
+
+.wrapper {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+button {
+  border: none;
+  color: #fff;
+  background-color: RED;
+  margin: 5px;
+  padding: 18px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #434343;
+  box-shadow: 5px 4px 20px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+div.card-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+div.card {
+  float: left;
+  width: 30%;
+  margin: 10px;
+}
+
+div.card-header {
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  background-color: #f1f1f1;
+}
+
+div.card-content {
+  padding: 1em;
+  background-color: rgb(179, 179, 179);
+}
